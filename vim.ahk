@@ -6,17 +6,23 @@ Vim := new VimAhk()
 Return
 
 ;Commands with <alt>
-; !h:: Send {Left} 
+!h:: Send {Left} 
 !j:: Send {Down}
 !k:: Send {Up}
-; !l:: Send {Right}
+!l:: Send {Right}
 !y:: Send {Home}
 !o:: Send {End}
 !9:: Send {Delete}
 !0:: Send {BackSpace}
 
 ;pasting current date with
-^!\:: ;<ctrl>-<shift>-\
+^!\:: ;<ctrl>-<alt>-\
+FormatTime, time, A_now, yyMMdd
+Send %time%
+return
+
+;pasting current datetime with
+^+!\:: ;<ctrl>-<shift>-<alt>-\
 FormatTime, time, A_now, yyMMdd_HHmmss 
 Send %time%
 return
