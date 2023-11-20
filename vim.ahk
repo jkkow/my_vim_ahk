@@ -15,6 +15,12 @@ Return
 !9:: Send {Delete}
 !0:: Send {BackSpace}
 
+;pasting current date with
+^!\:: ;<ctrl>-<shift>-\
+FormatTime, time, A_now, yyMMdd_HHmmss 
+Send %time%
+return
+
 $Esc::
   if(IME_CHECK("A"))
       Send, {VK15}   ;if keyboard input is Korean, change it to English. 
