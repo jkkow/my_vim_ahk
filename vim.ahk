@@ -1,7 +1,7 @@
 ﻿; Auto-execute section
 VimScriptPath := A_LineFile
 VimAppList := "Allow List"
-VimGroup := "ahk_exe notepad.exe,Write:,ahk_exe POWERPNT.exe,ahk_exe onenote.exe,OneNote,ahk_exe upnote.exe"
+VimGroup := "ahk_exe notepad.exe,ahk_exe explorer.exe,Write:,ahk_exe POWERPNT.exe,ahk_exe onenote.exe,OneNote,ahk_exe upnote.exe"
 Vim := new VimAhk()
 Return
 
